@@ -17,33 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="1aW-hD-pqr">
-                                <rect key="frame" x="63" y="39" width="249" height="29"/>
-                                <segments>
-                                    <segment title="Estrada"/>
-                                    <segment title="Satélite"/>
-                                    <segment title="Mista"/>
-                                </segments>
-                                <connections>
-                                    <action selector="setMap:" destination="BYZ-38-t0r" eventType="valueChanged" id="nHO-tq-DTZ"/>
-                                </connections>
-                            </segmentedControl>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QEu-5g-XqE">
-                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="QEu-5g-XqE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="09W-kV-iAL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="QEu-5g-XqE" secondAttribute="trailing" constant="-16" id="U58-mM-YTu"/>
-                            <constraint firstItem="QEu-5g-XqE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="v55-ND-AeQ"/>
+                            <constraint firstItem="QEu-5g-XqE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="v55-ND-AeQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="QEu-5g-XqE" secondAttribute="bottom" id="xTU-IT-em0"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="mapView" destination="QEu-5g-XqE" id="zw9-kl-yT0"/>
-                        <outlet property="segmentedControl" destination="1aW-hD-pqr" id="VJb-cr-Cq2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

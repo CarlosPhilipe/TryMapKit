@@ -36,6 +36,8 @@
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
+        <key>NSLocationWhenInUseUsageDescription</key>
+        <key>NSLocationAlwaysUsageDescription</key>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>

@@ -7,16 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
-#import <CoreLocation/CoreLocation.h>
+@import MapKit;
 
-@interface BPDMapaViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>{
-    CLLocationManager * locationManage;
-    MKMapView * mapView;
-}
+@interface BPDMapaViewController : UIViewController <UIApplicationDelegate, MKMapViewDelegate>
 
-@property(strong, nonatomic) IBOutlet MKMapView * mapView;
-
-- (IBAction)setMap:(id)sender;
+@property(strong, nonatomic) IBOutlet MKMapView *mapView;
+@property(nonatomic, strong) CLLocationManager *cl;
 
 @end

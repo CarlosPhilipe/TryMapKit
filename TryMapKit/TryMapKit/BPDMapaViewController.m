@@ -9,38 +9,27 @@
 #import "BPDMapaViewController.h"
 
 @interface BPDMapaViewController ()
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
+//@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @end
 
 @implementation BPDMapaViewController
 
-@synthesize mapView = _mapview;
+//@synthesize mapView = _mapview;
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    NSLog(@"\n\n------TTT");
-    locationManage = [[CLLocationManager alloc] init];
-    
-    locationManage.delegate = self;
-    
-    NSLog(@"\n\n------passo 1");
-    if ([locationManage respondsToSelector:@selector (requestWhenInUseAuthorization)]) {
-            NSLog(@"\n\n------passo 2");
-        [locationManage requestWhenInUseAuthorization];
-            NSLog(@"\n\n------passo 3");
-    }
-    [locationManage startUpdatingLocation];
-    self.mapView.showsUserLocation = YES;
-        NSLog(@"\n\n------passo 4");
-    // Do any additional setup after loading the view.
+    self.cl = [[CLLocationManager alloc] init];
+    [self.cl requestAlwaysAuthorization];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (void)requestAlwaysAuthorization
+
+/*- (void)requestAlwaysAuthorization
 {
         NSLog(@"\n\n------passo 5");
     
@@ -59,9 +48,15 @@
                                   otherButtonTitles:@"Settings", nil];
     [alertView show];
     }
+}*/
+
+- (void) mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    MKCoordinateRegion mc = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 200, 200);
+    [self.mapView setRegion:[self.mapView regionThatFits:mc] animated:YES];
 }
 
-- (IBAction)setMap:(id)sender {
+/*- (IBAction)setMap:(id)sender {
     
     NSLog(@"TTT %ld", _segmentedControl.selectedSegmentIndex);
     
@@ -80,7 +75,7 @@
         default:
             break;
     }
-}
+}*/
 
 
 
