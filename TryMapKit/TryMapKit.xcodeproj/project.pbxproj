@@ -14,6 +14,8 @@
 		72446B841AFE73AF000BCBCC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72446B831AFE73AF000BCBCC /* Images.xcassets */; };
 		72446B871AFE73AF000BCBCC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72446B851AFE73AF000BCBCC /* LaunchScreen.xib */; };
 		72446B931AFE73AF000BCBCC /* TryMapKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72446B921AFE73AF000BCBCC /* TryMapKitTests.m */; };
+		72446B9D1AFFA89F000BCBCC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72446B9C1AFFA89F000BCBCC /* MapKit.framework */; };
+		72446BA01B00D7DF000BCBCC /* BPDMapaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72446B9F1B00D7DF000BCBCC /* BPDMapaViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,9 @@
 		72446B8C1AFE73AF000BCBCC /* TryMapKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TryMapKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72446B911AFE73AF000BCBCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72446B921AFE73AF000BCBCC /* TryMapKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TryMapKitTests.m; sourceTree = "<group>"; };
+		72446B9C1AFFA89F000BCBCC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		72446B9E1B00D7DF000BCBCC /* BPDMapaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPDMapaViewController.h; sourceTree = "<group>"; };
+		72446B9F1B00D7DF000BCBCC /* BPDMapaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPDMapaViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72446B9D1AFFA89F000BCBCC /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,7 @@
 		72446B6A1AFE73AF000BCBCC = {
 			isa = PBXGroup;
 			children = (
+				72446B9C1AFFA89F000BCBCC /* MapKit.framework */,
 				72446B751AFE73AF000BCBCC /* TryMapKit */,
 				72446B8F1AFE73AF000BCBCC /* TryMapKitTests */,
 				72446B741AFE73AF000BCBCC /* Products */,
@@ -89,6 +96,8 @@
 				72446B831AFE73AF000BCBCC /* Images.xcassets */,
 				72446B851AFE73AF000BCBCC /* LaunchScreen.xib */,
 				72446B761AFE73AF000BCBCC /* Supporting Files */,
+				72446B9E1B00D7DF000BCBCC /* BPDMapaViewController.h */,
+				72446B9F1B00D7DF000BCBCC /* BPDMapaViewController.m */,
 			);
 			path = TryMapKit;
 			sourceTree = "<group>";
@@ -221,6 +230,7 @@
 			files = (
 				72446B7F1AFE73AF000BCBCC /* ViewController.m in Sources */,
 				72446B7C1AFE73AF000BCBCC /* AppDelegate.m in Sources */,
+				72446BA01B00D7DF000BCBCC /* BPDMapaViewController.m in Sources */,
 				72446B791AFE73AF000BCBCC /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
