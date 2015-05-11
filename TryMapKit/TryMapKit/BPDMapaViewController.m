@@ -9,6 +9,7 @@
 #import "BPDMapaViewController.h"
 
 @interface BPDMapaViewController ()
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 
 @end
 
@@ -18,14 +19,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    localizationManage = [[CLLocationManager alloc] init];
-    localizationManage.delegate = self;
-    if ([localizationManage respondsToSelector:@selector (requestWhenInUseAuthorization)]) {
-        [localizationManage requestWhenInUseAuthorization];
-    }
-    [localizationManage startUpdatingLocation];
-    self.mapView.showsUserLocation = YES;
+    NSLog(@"\n\n------TTT");
+    locationManage = [[CLLocationManager alloc] init];
     
+    locationManage.delegate = self;
+    
+    NSLog(@"\n\n------passo 1");
+    if ([locationManage respondsToSelector:@selector (requestWhenInUseAuthorization)]) {
+            NSLog(@"\n\n------passo 2");
+        [locationManage requestWhenInUseAuthorization];
+            NSLog(@"\n\n------passo 3");
+    }
+    [locationManage startUpdatingLocation];
+    self.mapView.showsUserLocation = YES;
+        NSLog(@"\n\n------passo 4");
     // Do any additional setup after loading the view.
 }
 
@@ -35,6 +42,8 @@
 }
 - (void)requestAlwaysAuthorization
 {
+        NSLog(@"\n\n------passo 5");
+    
     CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
     // If the status is denied or only granted for when in use, display an alert
     if (status == kCLAuthorizationStatusAuthorizedWhenInUse || status == kCLAuthorizationStatusDenied)
@@ -52,15 +61,27 @@
     }
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)setMap:(id)sender {
+    
+    NSLog(@"TTT %ld", _segmentedControl.selectedSegmentIndex);
+    
+    switch (((UISegmentedControl *) sender).selectedSegmentIndex) {
+        case 0:
+            mapView.mapType = MKMapTypeStandard;
+            NSLog(@" 0 ");
+            break;
+        case 1:
+            mapView.mapType = MKMapTypeSatellite;
+            break;
+        case 2:
+            mapView.mapType = MKMapTypeHybrid;
+            break;
+            
+        default:
+            break;
+    }
 }
-*/
+
+
 
 @end

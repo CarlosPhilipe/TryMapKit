@@ -11,11 +11,12 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface BPDMapaViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>{
-    CLLocationManager * localizationManage;
+    CLLocationManager * locationManage;
     MKMapView * mapView;
 }
 
 @property(strong, nonatomic) IBOutlet MKMapView * mapView;
 
+- (IBAction)setMap:(id)sender;
 
 @end
