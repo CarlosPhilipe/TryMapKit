@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface BPDMapaViewController : UIViewController{
+@interface BPDMapaViewController : UIViewController <CLLocationManagerDelegate, MKMapViewDelegate>{
+    CLLocationManager * localizationManage;
     MKMapView * mapView;
 }
 
