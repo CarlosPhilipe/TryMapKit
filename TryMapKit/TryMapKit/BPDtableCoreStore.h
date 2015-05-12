@@ -20,7 +20,7 @@
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
-// + (instancetype)sharedStore; //dando erro ainda nao implementado.
+ + (instancetype)sharedStore; 
 
 - (BPDtableCore *)addNewMomentByDate:(NSDate *)date andImage:(UIImage *)image andTitle:(NSArray *)title andDescricao:(NSArray *)descricao andLatitude:(double *)latitude andLongitude:(double *)longitude andRemember:(BOOL *)remember;
 
