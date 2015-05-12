@@ -20,6 +20,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.mapView.delegate = self;
+    self.mapView.showsUserLocation = YES;
+    
     self.coreLocation = [[CLLocationManager alloc] init];
     [self.coreLocation requestAlwaysAuthorization];
 }
