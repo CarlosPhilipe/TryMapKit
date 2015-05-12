@@ -12,6 +12,6 @@
 @interface BPDMapaViewController : UIViewController <UIApplicationDelegate, MKMapViewDelegate>
 
 @property(strong, nonatomic) IBOutlet MKMapView *mapView;
-@property(nonatomic, strong) CLLocationManager *cl;
+@property(nonatomic, strong) CLLocationManager *coreLocation;
 
 @end

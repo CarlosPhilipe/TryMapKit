@@ -20,8 +20,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.cl = [[CLLocationManager alloc] init];
-    [self.cl requestAlwaysAuthorization];
+    self.coreLocation = [[CLLocationManager alloc] init];
+    [self.coreLocation requestAlwaysAuthorization];
 }
 
 - (void)didReceiveMemoryWarning {
