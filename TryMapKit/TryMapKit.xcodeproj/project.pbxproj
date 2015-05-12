@@ -16,6 +16,9 @@
 		72446B931AFE73AF000BCBCC /* TryMapKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 72446B921AFE73AF000BCBCC /* TryMapKitTests.m */; };
 		72446B9D1AFFA89F000BCBCC /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72446B9C1AFFA89F000BCBCC /* MapKit.framework */; };
 		72446BA01B00D7DF000BCBCC /* BPDMapaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72446B9F1B00D7DF000BCBCC /* BPDMapaViewController.m */; };
+		CD8F07EB1B02988F006CC35E /* TryMapCore.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD8F07E91B02988F006CC35E /* TryMapCore.xcdatamodeld */; };
+		CD8F07EE1B029A1B006CC35E /* BPDtableCore.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8F07ED1B029A1B006CC35E /* BPDtableCore.m */; };
+		CD8F07F21B029A89006CC35E /* BPDtableCoreStore.m in Sources */ = {isa = PBXBuildFile; fileRef = CD8F07F11B029A89006CC35E /* BPDtableCoreStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,11 @@
 		72446B9C1AFFA89F000BCBCC /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		72446B9E1B00D7DF000BCBCC /* BPDMapaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPDMapaViewController.h; sourceTree = "<group>"; };
 		72446B9F1B00D7DF000BCBCC /* BPDMapaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPDMapaViewController.m; sourceTree = "<group>"; };
+		CD8F07EA1B02988F006CC35E /* TryMapCore.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TryMapCore.xcdatamodel; sourceTree = "<group>"; };
+		CD8F07EC1B029A1B006CC35E /* BPDtableCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPDtableCore.h; sourceTree = "<group>"; };
+		CD8F07ED1B029A1B006CC35E /* BPDtableCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPDtableCore.m; sourceTree = "<group>"; };
+		CD8F07F01B029A89006CC35E /* BPDtableCoreStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPDtableCoreStore.h; sourceTree = "<group>"; };
+		CD8F07F11B029A89006CC35E /* BPDtableCoreStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPDtableCoreStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,11 +101,13 @@
 				72446B7D1AFE73AF000BCBCC /* ViewController.h */,
 				72446B7E1AFE73AF000BCBCC /* ViewController.m */,
 				72446B801AFE73AF000BCBCC /* Main.storyboard */,
+				CD8F07EF1B029A24006CC35E /* model */,
 				72446B831AFE73AF000BCBCC /* Images.xcassets */,
 				72446B851AFE73AF000BCBCC /* LaunchScreen.xib */,
 				72446B761AFE73AF000BCBCC /* Supporting Files */,
 				72446B9E1B00D7DF000BCBCC /* BPDMapaViewController.h */,
 				72446B9F1B00D7DF000BCBCC /* BPDMapaViewController.m */,
+				CD8F07E91B02988F006CC35E /* TryMapCore.xcdatamodeld */,
 			);
 			path = TryMapKit;
 			sourceTree = "<group>";
@@ -126,6 +136,17 @@
 				72446B911AFE73AF000BCBCC /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CD8F07EF1B029A24006CC35E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				CD8F07ED1B029A1B006CC35E /* BPDtableCore.m */,
+				CD8F07EC1B029A1B006CC35E /* BPDtableCore.h */,
+				CD8F07F01B029A89006CC35E /* BPDtableCoreStore.h */,
+				CD8F07F11B029A89006CC35E /* BPDtableCoreStore.m */,
+			);
+			name = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,8 +249,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD8F07EE1B029A1B006CC35E /* BPDtableCore.m in Sources */,
 				72446B7F1AFE73AF000BCBCC /* ViewController.m in Sources */,
+				CD8F07EB1B02988F006CC35E /* TryMapCore.xcdatamodeld in Sources */,
 				72446B7C1AFE73AF000BCBCC /* AppDelegate.m in Sources */,
+				CD8F07F21B029A89006CC35E /* BPDtableCoreStore.m in Sources */,
 				72446BA01B00D7DF000BCBCC /* BPDMapaViewController.m in Sources */,
 				72446B791AFE73AF000BCBCC /* main.m in Sources */,
 			);
@@ -426,6 +450,7 @@
 				72446B981AFE73AF000BCBCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		72446B991AFE73AF000BCBCC /* Build configuration list for PBXNativeTarget "TryMapKitTests" */ = {
 			isa = XCConfigurationList;
@@ -434,8 +459,23 @@
 				72446B9B1AFE73AF000BCBCC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CD8F07E91B02988F006CC35E /* TryMapCore.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CD8F07EA1B02988F006CC35E /* TryMapCore.xcdatamodel */,
+			);
+			currentVersion = CD8F07EA1B02988F006CC35E /* TryMapCore.xcdatamodel */;
+			name = TryMapCore.xcdatamodeld;
+			path = ../TryMapCore.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 72446B6B1AFE73AF000BCBCC /* Project object */;
 }
